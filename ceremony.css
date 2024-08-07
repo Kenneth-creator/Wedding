@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap');
+
+@media only screen and (max-width: 600px){
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background-image: url('pics/cover1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; /* Centers the background image */
+        background-attachment: fixed;
+
+
+    }
+
+    .background{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .cover{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: -30px;
+    }
+
+
+
+    /* From Uiverse.io by Praashoo7 */ 
+    #form {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 3em;
+        padding-left: 2.8em;
+        padding-right: 2.8em;
+        padding-bottom: 2.1em;
+        border: 2px dashed #DAA06D;
+        border-radius: 15px;
+        background-color: #EADDCA;
+        box-shadow: 0 0 0 4px #EADDCA, 2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+        transition: .4s ease-in-out;
+        position: fixed; /* Change from fixed to absolute */
+        top: 25%;
+        left: 5%;
+        z-index: 1;
+    }
+
+
+    .hidden {
+        display: none;
+    }
+
+    #form p2 {
+        padding-bottom: 1em;
+        font-family: "Raleway", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        display: flex;
+        text-align: center;
+    }
+    
+    #form .heading {
+        padding-left: 0.8em;
+        color: #DAA06D;
+        background-color: transparent;
+        letter-spacing: .5em;
+        text-align: center;
+        padding-bottom: 1em;
+        text-shadow: inset -1px -1px 1px #DAA06D;
+    }
+    
+    #form #input {
+        outline: none;
+        border: 1px solid #DAA06D;
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        background-color: #e9e5de;
+        text-align: center;
+        padding: 10px;
+        font-family: "Raleway", sans-serif;
+    }
+    
+    #form #btn {
+        align-self: center;
+        margin-top: 2em;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        color: white;
+        background-color: #E5AA70;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        transition: .4s ease-in-out opacity, .1s ease-in-out active;
+        padding: 1em;
+        box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+        position: relative;
+        left: 40%;
+    }
+    
+    #form #btn:hover {
+        opacity: 0.8;
+    }
+    
+    #form #btn:active {
+        transform: translateX(0.1em) translateY(0.1em);
+        box-shadow: none;
+    }
+
+    .background #return{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    #return img{
+        width: 35px;
+        height: 35px;
+    }
+
+    .background #toggleButton {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: none;
+        border: none;
+    }
+
+    #toggleButton img{
+        width: 25px;
+        height: 25px;
+    }
+
+    #toggleButton img:active{
+        transform: scale(1.2);
+    }
+
+    .ceremony{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 30%;
+    }
+
+    .ceremony img{
+        width: 90%;
+        height: auto;
+
+    }
+
+    .ceremony p{
+        width: 80%;
+        height: auto;
+        margin-top: -80px;
+        text-align: justify;
+        font-family: "LXGW WenKai Mono TC", monospace;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .ceremony .footer{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .ceremony h1{
+        color: #8D493A;
+    }
+
+    #form #message{
+        text-align: center;
+        color: red;
+        font-family: "LXGW WenKai Mono TC", monospace;
+        margin: 15px;
+    }
+
+    .congrats{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -20px;
+    }
+
+    .congrats h1{
+        font-family: "Grey Qo", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3em;
+        color: #8D493A;
+    }
+
+    .footer a{
+        position: absolute;
+        bottom: 10px;
+        font-family: "LXGW WenKai Mono TC", monospace;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+        padding: 10px;
+        background-color: crimson;
+        border-radius: 10px;
+    }
+
+    .footer a:hover{
+        background-color: rgb(212, 107, 128);
+    }
+
+    .footer a:active{
+        background-color: rgb(110, 13, 32);
+    }
+
+    #play-button{
+        position: absolute;
+        top: 50px;
+        border: 1px solid white;
+        padding: 5px;
+        background-color: crimson;
+        color: white;
+        font-family: "LXGW WenKai Mono TC", monospace;
+    }
+
+
+
+
+}

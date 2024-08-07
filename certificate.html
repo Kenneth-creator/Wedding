@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="certificate.css">
+    <title>Certificate</title>
+</head>
+<body>
+
+    <div class="background">
+
+        <div id="return" onclick="back()">
+            <img src="pics/return.png">
+        </div>
+
+
+        <div class="cover">
+            <img src="pics/logo.png" class="logo">
+        </div>
+
+        
+
+        <div class="photo">
+            <h1>Marriage Certificate</h1>
+            <img src="pics/certificate.jpg">
+            <div class="button-borders">
+                <button onclick="redirectToDownload()" class="primary-button"> DOWNLOAD
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function redirectToDownload() {
+            // Replace this URL with your actual Google Drive download link
+            const downloadUrl = "https://drive.google.com/file/d/1NSB-SLGxz52SbuKk_vTo9tp5nB0qTEMR/view?usp=sharinghttps://drive.google.com/file/d/1NSB-SLGxz52SbuKk_vTo9tp5nB0qTEMR/view?usp=drive_link";
+
+            // Redirect to the download URL
+            window.location.href = downloadUrl;
+        }
+
+        function back(){
+            window.history.back();
+        }
+    </script>
+    
+</body>
+</html>

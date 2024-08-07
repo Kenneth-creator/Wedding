@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css">
+    <title>K & A Wedding</title>
+</head>
+<body>
+    <div class="background">
+
+        <div class="gretings">WE INVITE YOU<br>
+            TO CELEBRATE OUR WEDDING</div>
+        <div class="angel">Angel</div>
+        <div class="between">
+            <div class="line">
+                <div class="and">and</div>
+            </div>
+        </div>
+        <div class="ken">Kenneth</div>
+        
+        <div class="dt">
+            <button id="btn" onclick="info()">Proceed</button>
+            <br>
+            <div id="date"></div>
+            <div id="time"></div>
+            
+        </div>
+        <div class="message">Two hearts, one love, and a lifetime <br>
+            of happiness. Join us as <br>
+            we say 'I do' and <br>
+            celebrate our<br>
+             love. </div>
+        
+    </div>
+
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Entrance Code</h2>
+            <input type="password" id="passwordInput" placeholder="Enter your password">
+            <button id="submitPasswordButton">Submit</button>
+        </div>
+    </div>
+
+
+
+    <script>
+
+    const today = new Date();
+
+    const month = today.getMonth() +  1;
+    const day = today.getDay();
+    const year = today.getFullYear();
+    const hour = today.getHours();
+    const minutes = today.getMinutes();
+
+    const formatedDate = month + '/' + day  + '/' + year; 
+    const formatedTime = hour + ':' + minutes + ' PM';
+
+    document.getElementById('date').innerText = formatedDate;
+    document.getElementById('time').innerText = formatedTime;
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('passwordModal');
+        const openModalButton = document.getElementById('btn');
+        const closeButton = document.querySelector('.close');
+        const submitPasswordButton = document.getElementById('submitPasswordButton');
+        const passwordInput = document.getElementById('passwordInput');
+
+        // Open modal when the button is clicked
+        openModalButton.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        // Close the modal when the 'x' is clicked
+        closeButton.addEventListener('click', () => {
+            modal.style.display = 'none';
+            passwordInput.value = ''; // Clear input
+        });
+
+        // Close the modal if user clicks outside of it
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                passwordInput.value = ''; // Clear input
+            }
+        });
+
+        // Handle password submission
+        submitPasswordButton.addEventListener('click', () => {
+            const enteredPassword = passwordInput.value;
+            
+            // Replace 'yourPassword' with the actual password
+            const correctPassword = '062824';
+            
+            if (enteredPassword === correctPassword) {
+                alert('Welcome my Beautiful Bride');
+                modal.style.display = 'none'; // Close modal
+                window.location.href = 'info.html';
+            } else {
+                alert('Code is incorrect');
+                passwordInput.value = '';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ceremony.css">
+    <title>Ceremony</title>
+
+</head>
+<body>
+
+    <div class="background">
+        <div class="cover">
+            <img src="pics/logo.png" class="logo">
+        </div>
+
+        <div id="return" onclick="back()">
+            <img src="pics/return.png">
+        </div>
+
+        <div id="toggleButton">
+            <img src="pics/write.png">
+        </div>
+
+        <form id="form" class="hidden">
+
+            <div id="message"></div>
+            <p class="heading">WEDDING VOWS</p>
+            <p2 style="text-align: center;">The groom already prepared his vows and now it's your turn</p2>
+            <textarea id="input" placeholder="Write your vows here..."></textarea>
+            <button id="btn" type="button">Submit</button>
+        </form>
+
+        <div class="ceremony">
+            <h1>Wedding Ceremony</h1>
+            <img src="pics/entrance.png">
+            <p>
+                As the organist began to play Palagi by TJ Monderde, the massive wooden doors at the back of the church swung open, revealing the bride. Angel stood at the threshold, her eyes shimmering with a mixture of anticipation and emotion. Her ivory lace gown trailed behind her, the delicate fabric whispering over the floor as she took her first step down the aisle.
+            </p>
+            
+            <img src="pics/looking.png">
+            <p>
+                At the other end of the aisle, Kenneth stood tall, his hands clasped together in nervous excitement. His heart raced with each of Angel’s steps, the reality of the moment sinking in. He wore a classic white tuxedo, perfectly tailored, and a single white rose pinned to his lapel, echoing the theme of Angel's bouquet. His eyes never left her, captivated by the vision approaching him.
+            </p>
+
+            <img src="pics/front.png">
+            <p>
+                A kindly old priest with eyes that twinkled with joy, welcomed everyone. “Dearly beloved, we are gathered here today to witness and celebrate the union of Angel and Kenneth in marriage. A sacred bond that they shall share for eternity.”
+                <br><br>
+                As the priest spoke, the atmosphere in the church shifted. The room seemed to draw closer, enveloped in warmth and love. The light filtering through the stained glass bathed the couple in a heavenly glow, as if blessing them with the hues of their future.
+            </p>
+
+            <img src="pics/Exvows.png">
+            <p>
+                Angel and Kenneth turned to face each other, their hands entwined, forming a bridge between two lives. Angel’s eyes glistened with unshed tears, a testament to the depth of her feelings. She took a steadying breath and began her vows.
+                <br><br>
+                “Jan Kenneth Ambrosio,” she started, her voice steady yet tender. "<span id="angelVow">(Your wedding vows goes here...)</span>"
+                <br><br>
+                “Angel Regalado, you are my light, my inspiration, and my heart’s true desire. From this day forward, I vow to cherish you, to laugh with you in times of joy, and comfort you in times of sorrow. I promise to build a life with you filled with love, adventure, and understanding. You are my everything, and I will love you until the end of my days.”
+            </p>
+
+            <img src="pics/exrings.png">
+            <p>
+                The priest nodded approvingly, his heart full as he gestured for the rings. The best man stepped forward, handing Ethan the simple gold band that symbolized their eternal bond.
+                <br><br>
+                “With this ring, I thee wed,” Kenneth said, slipping it onto Angel’s finger. The ring glimmered in the light, a perfect circle with no beginning and no end.
+                <br><br>
+                Angel repeated the gesture, her hands steady as she placed the matching band onto Kenneth’s finger. “With this ring, I thee wed,” she echoed, sealing their vows with a promise that transcended words.
+            </p>
+
+            <img src="pics/kiss.png">
+            <p>
+                The priest raised his hands in blessing, his voice resonating through the cathedral. “By the power vested in me, I now pronounce you husband and wife. You may kiss the bride.”
+                <br><br>
+                A murmur of joy swept through the congregation as Kenneth lifted Angel’s veil, revealing her full beauty for the first time. He cupped her face gently and leaned in, their lips meeting in a kiss that spoke of promises fulfilled and a future yet to unfold.
+                <br><br>
+                The applause was thunderous, a joyful acknowledgment of the love that had united two hearts. Angel and Kenneth turned to face their family and friends, now joined as one. They walked down the aisle together, hand in hand, stepping into a new chapter of their lives as husband and wife.
+            </p>
+
+            <div class="footer">
+                <div class="congrats">
+                    <h1>Congratulations!!!</h1>
+                </div>
+                <a onclick="certificate()">Merriage Certificate</a>
+            </div>
+
+            <audio id="audio-player" loop>
+                <source src="palagi.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            
+
+
+        </div>
+
+        
+
+    </div>
+
+    <script>
+
+        document.getElementById('toggleButton').addEventListener('click', function() {
+                const form = document.getElementById('form');
+
+                if (form.style.display === 'none' || form.style.display === '') {
+                    form.style.display = 'block';
+                } else {
+                    form.style.display = 'none';
+                }
+            });
+
+        // document.getElementById('btn').addEventListener('click', function() {
+        //     const form = document.getElementById('form');
+
+        //     if (form.style.display === 'block') {
+        //           form.style.display = 'none'; // Hide the form after submission
+        //     } else {
+        //          form.style.display = 'block';
+        //      }
+        // });
+
+        document.getElementById('form').style.display = 'block';
+
+        function back(){
+            window.location.href = "info.html";
+        }
+
+
+        const form = document.getElementById('form');
+        const userInput = document.getElementById('input');
+        const displayText = document.getElementById('angelVow');
+        const submitButton = document.getElementById('btn');
+        const messageBox = document.getElementById('message');
+
+        // Add event listener to the button for click event
+        submitButton.addEventListener('click', () => {
+            const inputText = userInput.value.trim();
+
+            // Check if the input is not empty
+            if (inputText !== '') {
+                // Display the input text in the span
+                displayText.textContent = inputText;
+
+                form.style.display = 'none'; 
+                messageBox.textContent = '';
+            } else {
+                messageBox.textContent = 'Please enter some text!';
+            }
+        });
+
+        function certificate(){
+            window.location.href = "certificate.html";
+        }
+
+
+        
+
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+        const audio = document.getElementById('audio-player');
+        const playButton = document.getElementById('play-button');
+
+        audio.muted = true;
+        audio.play().then(() => {
+            audio.muted = false;
+        }).catch((error) => {
+            playButton.style.display = 'block';
+            playButton.addEventListener('click', () => {
+                audio.muted = false;
+                audio.play();
+                playButton.style.display = 'none';
+            });
+        });
+    });
+        
+
+    </script>
+    
+</body>
+</html>
