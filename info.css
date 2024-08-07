@@ -48,7 +48,7 @@
     }
 
     .pics{
-        width: 90vw;
+        width: 95vw;
         height: 60vh;
         display: flex;
         flex-wrap: wrap;
@@ -57,7 +57,7 @@
     }
 
     .pics img{
-        width: 165px;
+        width: 155px;
         height: auto;
     }
 
