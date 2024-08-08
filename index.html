@@ -94,12 +94,19 @@
             
             // Replace 'yourPassword' with the actual password
             const correctPassword = '062824';
+            const guestPassword = '1234';
             
             if (enteredPassword === correctPassword) {
                 alert('Welcome my Beautiful Bride');
                 modal.style.display = 'none'; // Close modal
                 window.location.href = 'info.html';
-            } else {
+            }
+            else if(enteredPassword === guestPassword){
+                alert('Welcome to our wedding day');
+                modal.style.display = 'none'; // Close modal
+                window.location.href = 'infoG.html';
+            }
+            else {
                 alert('Code is incorrect');
                 passwordInput.value = '';
             }
