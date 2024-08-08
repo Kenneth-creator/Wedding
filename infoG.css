@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+@media only screen and (max-width: 600px){
+
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    body {
+        width: 100%;
+        height: 100vh;
+        background-image: url('pics/cover1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; /* Centers the background image */
+        background-attachment: fixed;
+
+
+    }
+
+    #background{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cover{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+    }
+
+    .logo{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: -30px;
+    }
+
+    .pics{
+        width: 90vw;
+        height: 60vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pics img{
+        width: 155px;
+        height: auto;
+    }
+
+    .program{
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+        margin-top: -50px;
+    }
+
+    .program img{
+        width: 100%;
+        height: auto;
+    }
+
+
+    .church{
+        
+        margin-top: 10px;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .church #name{
+        font-family: "Lilita One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.4em;
+        margin: 20px 10px;
+        color: #8D493A;
+    }
+
+
+
+    .church img{
+        width: 95%;
+        height: auto;
+
+    }
+
+    .church p2{
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-style: 1em;
+        margin-top: 5px;
+    }
+
+    .outfit{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .outfit #name{
+        font-family: "Lilita One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.4em;
+        color: #8D493A;
+    }
+
+    .outfit .attire{
+        width: 100%;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .outfit .attire img{
+        width: 150px;
+        height: auto;
+    }
+
+    .outfit .label{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        margin-top: -15px;
+    }
+
+    .outfit .label p{
+        font-family: "Dancing Script", cursive;
+        font-optical-sizing: auto;
+        font-style: 1em;
+        font-weight: bold;
+    }
+
+    .ring{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .ring p1{
+        font-family: "Lilita One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.4em;
+        color: #8D493A;
+    }
+
+    .ring img{
+        width: 70%;
+        height: auto;
+
+    }
+
+    .car{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .car p1{
+        font-family: "Lilita One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.4em;
+        color: #8D493A;
+    }
+
+    .car img{
+        width: 80%;
+        height: auto;
+    }
+
+    .reception{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .reception p1{
+        font-family: "Lilita One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.4em;
+        color: #8D493A;
+    }
+
+    .wedding{
+        width: 90%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20px;
+    }
+
+    a{
+        position: relative;
+        bottom: 20px;
+        font-size: 1.2em;
+        font-family: "Lilita One", sans-serif;
+        color: #8D493A;
+    }
+
+    .footer{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .footer a{
+        position: absolute;
+        bottom: 40px;
+        font-family: "LXGW WenKai Mono TC", monospace;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+        padding: 10px;
+        background-color: crimson;
+        border-radius: 10px;
+    }
+
+    .footer a:hover{
+        background-color: rgb(212, 107, 128);
+    }
+
+    .footer a:active{
+        background-color: rgb(110, 13, 32);
+    }
+
+
+
+}
